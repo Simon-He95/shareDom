@@ -1,7 +1,7 @@
 <!--
  * @Author: Simon
  * @Date: 2022-04-03 15:34:29
- * @LastEditTime: 2022-04-04 13:59:01
+ * @LastEditTime: 2022-04-04 14:13:16
  * @FilePath: \shareDom\src\components\FloatContainer.vue
 -->
 <script setup lang="ts">
@@ -11,6 +11,7 @@ const rect = $ref<DOMRect | undefined>()
 function update() {
   rect = useElementBounding(proxyEl)
 }
+
 const style = computed((): StyleValue => ({
   transition: 'all 0.1s',
   position: 'fixed',
