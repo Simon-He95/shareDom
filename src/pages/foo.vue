@@ -1,11 +1,12 @@
 <!--
  * @Author: Simon
  * @Date: 2022-04-03 12:33:29
- * @LastEditTime: 2022-04-04 09:17:37
+ * @LastEditTime: 2022-04-04 14:52:20
  * @FilePath: \shareDom\src\pages\foo.vue
 -->
 <script setup lang="ts">
 import type { StyleValue } from 'vue'
+import { ImageProxy } from '../composables/image'
 
 const size = $(useStorage('size', 100))
 function enlarge() {
@@ -35,7 +36,7 @@ const style = computed((): StyleValue => ({
     </div>
 
     <div m10 flex="~ col sm:row gap-4" items-center>
-      <FloatProxy :style="style" rounded="1/2" />
+      <ImageProxy :style="style" rounded="1/2" />
       <p flex-1>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
       </p>
